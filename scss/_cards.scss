@@ -1,0 +1,13 @@
+#board {
+  margin:10px 0;
+}
+#board .card a {
+  display:block;
+  text-align: center;
+  font-size:rem-calc(75);
+  border:2px solid #999;
+}
+.status {
+  color:green;
+  font-weight:bold;
+}
