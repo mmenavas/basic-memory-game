@@ -123,13 +123,15 @@ $("#board" ).delegate(".card a.inactive", "click", function(event) {
     }
     else {
       counter++;
-      if (counter == (total / 2)) {
-        $('.status').text("Attempts: " + attempts + ". You win!");
-      }
     }
     card1 = false;
     attempts++;
-    $('.status').text("Attempts: " + attempts);
+    if (counter == (total / 2)) {
+      $('.status').text("Attempts: " + attempts + ". You win!");
+    }
+    else {
+      $('.status').text("Attempts: " + attempts);
+    }
   }
 
 });
