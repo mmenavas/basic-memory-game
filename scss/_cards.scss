@@ -4,10 +4,22 @@
 #board .card a {
   display:block;
   text-align: center;
-  font-size:rem-calc(75);
+  font-size:rem-calc(24);
   border:2px solid #999;
 }
 .status {
   color:green;
   font-weight:bold;
+}
+
+@media #{$medium-only} {
+  #board .card a {
+    font-size:rem-calc(36);
+  }
+}
+
+@media #{$large-up} {
+  #board .card a {
+    font-size:rem-calc(75);
+  }
 }
