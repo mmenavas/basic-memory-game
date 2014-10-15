@@ -60,8 +60,11 @@ var total = gridValues[0] * gridValues[1];
 // Boolean
 var card1 = false;
 
-// Pair Counter
+// Successful attempts counter
 var counter = 0;
+
+// Total attempts counter
+var attempts = 0;
 
 // Prepare table
 function prepareBoard(h, v, t) {
@@ -121,10 +124,12 @@ $("#board" ).delegate(".card a.inactive", "click", function(event) {
     else {
       counter++;
       if (counter == (total / 2)) {
-        $('.status').text("You win!");
+        $('.status').text("Attempts: " + attempts + ". You win!");
       }
     }
     card1 = false;
+    attempts++;
+    $('.status').text("Attempts: " + attempts);
   }
 
 });
