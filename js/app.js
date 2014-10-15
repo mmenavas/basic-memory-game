@@ -1,5 +1,7 @@
 /**
  * Author: Maximo Mena
+ * GitHub: mmenavas
+ * Twitter: @menamaximo
  */
 
 // Foundation JavaScript
