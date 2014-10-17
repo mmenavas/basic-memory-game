@@ -82,6 +82,7 @@ function prepareBoard(h, v, t) {
 
   card1 = false;
   counter = 0;
+  attempts = 0;
 }
 prepareBoard(gridValues[0], gridValues[1], total);
 
