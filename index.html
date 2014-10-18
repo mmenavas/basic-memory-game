@@ -8,32 +8,49 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-    <div class="row">
-      <div class="medium-3 columns">
-        <h2>Memory</h2>
-        <p>Find all matching block pairs. Challenge your memory skills by increasing the difficulty.</p>
-        <div class="panel">
-          <h3>Settings</h3>
-          <form id="settings" method="get">
-            <select id="grid">
-              <option value="2x2">2x2</option>
-              <option value="3x2">3x2</option>
-              <option value="4x2">4x2</option>
-              <option value="4x3">4x3</option>
-              <option value="6x3">6x3</option>
-              <option value="4x4">4x4</option>
-              <option value="6x4">6x4</option>
-            </select>
-            <input id="submit" class="button" type="button" value="Reset" />
-          </form>
-        </div>
+    <div id="header-section" class="row">
+      <div class="medium-12 columns">
+        <form id="settings">
+          <div class="row collapse">
+            <div id="logo-wrapper" class="medium-3 columns">
+              <h3 id="logo" class="small-only-text-center prefix">Memory</h3>
+            </div>
+            <div id="grid-label-wrapper" class="medium-2 columns">
+              <label class="prefix">Settings</label>
+            </div>
+            <div id="grid-wrapper" class="medium-3 columns">
+              <select id="grid" class="text-center">
+                <option value="3x2">3x2</option>
+                <option value="4x2">4x2</option>
+                <option value="4x3">4x3</option>
+                <option value="4x4">4x4</option>
+                <option value="6x3">6x3</option>
+                <option value="6x4">6x4</option>
+                <option value="6x6">6x6</option>
+                <option value="8x4">8x4</option>
+              </select>
+            </div>
+            <div id="reset-wrapper" class="medium-2 columns">
+              <input id="reset" class="button postfix" type="button" value="Reset" />
+            </div>
+            <div id="attempts-wrapper" class="medium-2 columns">
+              <h5 id="attempts" class="text-center postfix"></h5>
+            </div>
+          </div><!-- /.row -->
+        </form>
       </div>
-      <div class="medium-9 columns end">
+    </div><!-- /.row -->
+    <div class="row">
+      <div id="status-wrapper" class="small-12 columns">
+        <h4 id="status" class="text-center"></h4>
+      </div>
+    </div><!-- /.row -->
+    <div id="board-section" class="row">
+      <div id="board-wrapper" class="small-12 columns">
         <ul id="board">
         </ul>
-        <h4 class="status text-center"></h4>
       </div>
-    </div>
+    </div><!-- /.row -->
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>

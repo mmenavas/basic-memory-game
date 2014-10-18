@@ -9060,33 +9060,101 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 1, ../scss/_cards.scss */
-#board {
-  margin: 10px 0;
+/* line 2, ../scss/_cards.scss */
+#logo-wrapper #logo {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #B23727;
 }
 
-/* line 4, ../scss/_cards.scss */
+/* line 15, ../scss/_cards.scss */
+#grid-wrapper select {
+  margin: 0;
+}
+
+/* line 21, ../scss/_cards.scss */
+#reset-wrapper #reset {
+  background-color: #B23727;
+  margin: 0;
+}
+
+/* line 28, ../scss/_cards.scss */
+#attempts-wrapper #attempts {
+  color: #088A4B;
+  margin: 0;
+  font-size: 1.125rem;
+  background-color: #f2f2f2;
+}
+
+/* line 38, ../scss/_cards.scss */
+#status-wrapper #status {
+  background-color: #088A4B;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* line 46, ../scss/_cards.scss */
+#board {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #CCC;
+}
+/* line 50, ../scss/_cards.scss */
+#board .card {
+  padding: 0.125rem;
+  display: table;
+}
+/* line 53, ../scss/_cards.scss */
 #board .card a {
-  display: block;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
   text-align: center;
   font-size: 1.5rem;
-  border: 2px solid #999;
+  border: 1px solid #F2F5A9;
+  background-color: #F2F5A9;
+  background-image: url("../images/skulls.png");
 }
 
-/* line 10, ../scss/_cards.scss */
-.status {
-  color: green;
-  font-weight: bold;
-}
+@media only screen and (min-width: 40.063em) {
+  /* line 69, ../scss/_cards.scss */
+  #board-section {
+    height: 90%;
+  }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 16, ../scss/_cards.scss */
-  #board .card a {
+  /* line 72, ../scss/_cards.scss */
+  #board-wrapper,
+  #board,
+  .card a {
+    height: 100%;
+  }
+  /* line 76, ../scss/_cards.scss */
+  #board-wrapper a,
+  #board a,
+  .card a a {
     font-size: 2.25rem;
+  }
+
+  /* line 81, ../scss/_cards.scss */
+  #board-wrapper .rows-2 .card {
+    height: 50%;
+  }
+  /* line 84, ../scss/_cards.scss */
+  #board-wrapper .rows-3 .card {
+    height: 33.33%;
+  }
+  /* line 87, ../scss/_cards.scss */
+  #board-wrapper .rows-4 .card {
+    height: 25%;
+  }
+  /* line 90, ../scss/_cards.scss */
+  #board-wrapper .rows-6 .card {
+    height: 16.66%;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 22, ../scss/_cards.scss */
+  /* line 99, ../scss/_cards.scss */
   #board .card a {
     font-size: 4.6875rem;
   }

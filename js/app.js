@@ -68,7 +68,7 @@ var attempts = 0;
 
 // Prepare table
 function prepareBoard(h, v, t) {
-  var gridClass = 'small-block-grid-' + h;
+  var gridClass = 'small-block-grid-' + h + ' rows-' + v;
   var output = "";
   var i = 0;
   while(i < t) {
@@ -78,7 +78,8 @@ function prepareBoard(h, v, t) {
 
   $('#board').attr('class', gridClass)
   $('#board').html(output);
-  $('.status').text("");
+  $('#status').text("");
+  $('#attempts').text("");
 
   card1 = false;
   counter = 0;
@@ -93,7 +94,7 @@ cardSet.init(total);
 // Events //
 ////////////
 // Settings
-$("#submit").on("click", function() {
+$("#reset").on("click", function() {
   grid = $('#grid').val();
   gridValues = grid.split('x');
   total = gridValues[0] * gridValues[1];
@@ -127,11 +128,9 @@ $("#board" ).delegate(".card a.inactive", "click", function(event) {
     }
     card1 = false;
     attempts++;
+    $('#attempts').text("Attempts: " + attempts);
     if (counter == (total / 2)) {
-      $('.status').text("Attempts: " + attempts + ". You win!");
-    }
-    else {
-      $('.status').text("Attempts: " + attempts);
+      $('#status').text("You win!");
     }
   }
 
