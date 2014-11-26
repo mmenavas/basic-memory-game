@@ -1,3 +1,3 @@
-Maximo Mena's GitHub Page
+Memory Game
 =========================
-Visit menamaximo.com
+HTML, CSS and JavaScript game.
